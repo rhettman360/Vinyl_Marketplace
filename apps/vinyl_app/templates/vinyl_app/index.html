@@ -1,1 +1,25 @@
-
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Vinyls</title>
+  </head>
+  <body>
+    <h3>Vinyls</h3>
+    <table>
+      <tr>
+          <th>Title</th>
+          <th>Artist</th>
+          <th>Condition</th>
+      </tr>
+      {%for vinyls in vinyl%}
+      <tr>
+          <td><a href="/vinyl/{{vinyls.id}}">{{vinyls.title}}</td>
+          <td>{{vinyls.artist}}</td>
+          <td>{{vinyls.description}}</td>
+      </tr>
+      {%endfor%}
+    </table>
+  </body>
+</html>
+<!-- <a href="/friends/{{ids.id}}/remove">Remove as Friend</a></td> -->
